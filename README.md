@@ -1,5 +1,5 @@
 # portfolio
 my portfolio site
 <br />
-https://github.com/wlsghk/portfolio/index.html
+https://wlsghk.github.io/portfolio/index.html
 
