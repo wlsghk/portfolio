@@ -1,0 +1,58 @@
+/* 폰트 연결 */
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 전체 */
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    position: relative;
+    height: 100%;
+}
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    margin-top: 0;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 헤더 (fixed) */
+body .hidden {
+    display: none;
+}
+#header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 2.5rem;
+    background: #1d1d1d;
+    font-family: 'DungGeunMo';
+    color: #fff;
+    font-size: 1.3rem;
+    z-index: 100;
+    list-style: none;
+}
+.headerGithub {
+    margin: 0 2.5rem 0 5rem;
+}
+.headerGithub, .headerProjects {
+    cursor: pointer;
+}
