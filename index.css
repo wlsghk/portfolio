@@ -22,7 +22,6 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    cursor: url(/icon/mouse.svg) 4 5, auto;
 }
 html, body {
     position: relative;
@@ -119,3 +118,4 @@ body .hidden {
 .react {
     border-right: 0.0625rem solid #1d1d1d;
 }
+/* 프로젝트 */
