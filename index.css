@@ -21,7 +21,6 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 html, body {
     position: relative;
@@ -31,7 +30,7 @@ html, body {
 body .hidden {
     display: none;
 }
-#header {
+.header {
     display: flex;
     align-items: center;
     position: fixed;
@@ -44,12 +43,12 @@ body .hidden {
     z-index: 100;
     list-style: none;
 }
-.headerGithub {
+.nav-github {
     margin: 0 2.5rem 0 5rem;
 }
-.headerGithub,
-.headerProjects {
-    cursor: pointer;
+.headerGithub a, .headerProjects a {
+    color: #fff;
+    text-decoration: none;
 }
 /* Swiper */
 .swiper {
@@ -119,3 +118,6 @@ body .hidden {
     border-right: 0.0625rem solid #1d1d1d;
 }
 /* 프로젝트 */
+.projectsText {
+    font-size: 72px;
+}

@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/* 폰트 연결 */
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    color: #222;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    word-break: keep-all;
+    background: #F5F5F5;
+}
+
+html.active {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* 공통요소 */
+.inner {
+    position: relatvie;
+    display: block;
+    width: 100%;
+    /* block 요소 가운데 정렬 */
+    margin: 0 auto;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+    /* 원페이지스크롤 */
+    /* width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory; */
+}
+
+/* 원페이지스크롤 */
+/* section {
+    scroll-snap-align: center;
+} */
+
+/* 상단 */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 45px;
+    z-index: 9999;
+    background: #1D1D1D;
+}
+
+.header .inner {
+    max-width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+.nav {
+    height: 100%;;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.nav-main {
+    margin-left: 130px;
+}
+
+.nav-main, .nav-github,
+.nav-projects {
+    font-family: 'DungGeunMo';
+    font-size: 20px;
+    color: #fff;
+}
+
+/* 인트로 */
+.intro {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 150px 130px 0 130px;
+}
+
+.intro-title {
+    font-family: 'yg-jalnan';
+    font-size: 55px;
+    line-height: 1.5;
+}
+
+.intro-subtitle {
+    font-family: 'DungGeunMo';
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.intro-title, .intro-subtitle {
+    padding-top: 100px;
+}
+
+.intro-empty {
+    width: 300px;
+    height: 200px;
+    background:#F5F5F5;
+}
+
+.intro-img {
+    display: block;
+    /* background: url("../img/myBondee2.png") no-repeat right; */
+    /* background-size: cover; */
+}
+
+/* 인트로 반응형 */
+@media screen and (max-width: 1650px) {
+    .intro .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro-box {
+        justify-content: center;
+    }
+
+    .intro-title {
+        padding-top: 0;
+    }
+
+    .intro-img {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .intro-box {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .intro-title {
+        font-size: 50px;
+    }
+
+    .intro-subtitle {
+        font-size: 15.5px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .intro-box {
+        margin-left: 80px;
+        margin-right: 80px;  
+    }
+
+    .intro-title {
+        font-size: 45px;
+    }
+
+    .intro-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* 스킬 */
+.skills {
+    padding: 30px 0 0 130px;
+}
+
+.skills-txt {
+    font-family: 'yg-jalnan';
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.skills-box {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* 스킬 테이블 */
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #222;
+    padding: 12px 50px;
+    background: #fff;
+}
+
+/* 스킬 반응형 */
+@media screen and (max-width: 1650px) {
+    .skills {
+        padding: 0;
+        display: block;
+        width: 655px;
+        margin: 0 auto;
+    }
+}
+
+/* 프로젝트 */
+.projects {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 160px 0 0 130px;
+}
+
+.projects-txt {
+    font-family: 'yg-jalnan';
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.projects-box {
+    position: relative;
+    display: block;
+    width: 700px;
+    height: 550px;
+    background: #fff;
+    border: 1px solid #222;
+}
+
+.projects-box-header {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: #c3c3c3;
+    border-bottom: 1px solid #222;
+}
+
+.projects-box-img {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 40px;
+    background: black;
+}
+
+.projects-link {
+    width: 300px;
+
+}
