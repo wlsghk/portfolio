@@ -58,7 +58,7 @@ window.onload = function () {
 
   threeYears.addEventListener("click", function () {
     if (!proc.oneYears) {
-      proc.oneYears = "진화천재";
+      proc.oneYears = "초심 그대로 최신 언어와 기술을 익히는 데에 소홀하지 않을 것입니다. 맡은 일에 책임감을 가지고 임하는 훌륭한 프론트엔드 개발자가 되겠습니다.";
     }
   });
   // 속도
@@ -70,7 +70,7 @@ window.onload = function () {
       typingProc(proc[p]);
       return delete proc[p];
     }
-    typingProc("폴더를 클릭해 주세요!");
+    typingProc("폴더를 클릭하고 기다려 주세요!");
   };
 
   const typingProc = async (msg) => {
@@ -106,14 +106,16 @@ window.onload = function () {
   }
   // 초기 실행
   let running = setTimeout(typing, 0);
-  // 비전 폴더 클릭하면 창 안에 내용 변경
-  oneYears.addEventListener("click", function () {
-    this.src = "../icon/openFolder.png";
-  });
 
-  threeYears.addEventListener("click", function () {
-    this.src = "../icon/openFolder.png";
-  });
+  oneYears.addEventListener('click', function () {
+    this.src = "../icon/openFolder.png"
+    threeYears.src = "../icon/folder.png"
+  })
+
+  threeYears.addEventListener('click', function () {
+    this.src = "../icon/openFolder.png"
+    oneYears.src = "../icon/folder.png"
+  })
 };
 
 //1년 폴더를 누르면 폴더 이미지가 바뀌고, 3년 폴더를 누르면 1년 폴더는 원래대로 돌아오고 3년 폴더만 바뀜 다시 1년 폴더를 누르면 3년 폴더는 원래대로

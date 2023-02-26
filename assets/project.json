@@ -27,7 +27,7 @@
         "id": 2,
         "title": "포트폴리오 페이지",
         "subtitle": "저의 소개와 기술, 비전을 담은 현재 포트폴리오 페이지입니다. <br />(제작 기간)",
-        "image": "../img/도시락통.png",
+        "image": "../img/포트폴리오.png",
         "link": "#",
         "github": "https://github.com/wlsghk/portfolio"
     }
