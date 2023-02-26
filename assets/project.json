@@ -7,7 +7,7 @@
         "link": "https://wlsghk.github.io/firstProject/html/first.html",
         "github": "https://github.com/wlsghk/firstProject"
     },
-        {
+    {
         "id": 1,
         "title": "How you Feel Today?",
         "subtitle": "여섯 가지 감정에 따라 품목을 나누어 판매하는 사이트입니다. 메인 페이지를 담당했습니다. <br />(제작 인원 4명, 제작 기간 1달, 기여도 20%)",
@@ -15,7 +15,7 @@
         "link": "http://hyft.kr/",
         "github": "https://github.com/wlsghk/lastProject"
     },
-        {
+    {
         "id": 2,
         "title": "도시락통",
         "subtitle": "도시락통 사이트 클론코딩입니다. 개인적인 스터디용으로 제작했습니다.<br />(제작 기간 9일)",
@@ -23,7 +23,7 @@
         "link": "https://wlsghk.github.io/dosiraktong/index.html",
         "github": "https://github.com/wlsghk/dosiraktong"
     },
-            {
+    {
         "id": 2,
         "title": "포트폴리오 페이지",
         "subtitle": "저의 소개와 기술, 비전을 담은 현재 포트폴리오 페이지입니다. <br />(제작 기간)",

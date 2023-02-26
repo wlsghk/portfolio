@@ -171,7 +171,7 @@ body {
 }
 
 .intro-img img {
-    width: 650px;
+    width: 700px;
 }
 
 /* 인트로 반응형 */
@@ -191,6 +191,7 @@ body {
     }
 
     .intro-img {
+        margin-top: 15px;
         margin-bottom: 70px;
     }
 }
@@ -208,6 +209,10 @@ body {
     .intro-subtitle {
         font-size: 15.5px;
     }
+
+    .intro-img img {
+        width: 640px;
+    }
 }
 
 @media screen and (max-width: 860px) {
@@ -222,6 +227,16 @@ body {
 
     .intro-subtitle {
         font-size: 14px;
+    }
+
+    .intro-img img {
+        width: 580px;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .intro-title {
+        font-size: 30px;
     }
 }
 
@@ -370,6 +385,13 @@ td {
 
 .projects-link-github {
     left: 140px;
+}
+
+/* 프로젝트 반응형 */
+@media screen and (max-width: 1650px) {
+    .projects {
+        margin-top: 400px;
+    }
 }
 
 /* 비전 */
