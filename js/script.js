@@ -2,6 +2,7 @@ window.onload = function () {
   const swiperWrapper = document.querySelector(".swiper-wrapper");
   const oneYears = document.querySelector(".vision-folder-1 > img");
   const threeYears = document.querySelector(".vision-folder-3 > img");
+  const subtitle = document.querySelector('.intro-subtitle');
 
   // aos 연결
   AOS.init();
@@ -116,6 +117,21 @@ window.onload = function () {
     this.src = "../icon/openFolder.png"
     oneYears.src = "../icon/folder.png"
   })
-};
 
-//1년 폴더를 누르면 폴더 이미지가 바뀌고, 3년 폴더를 누르면 1년 폴더는 원래대로 돌아오고 3년 폴더만 바뀜 다시 1년 폴더를 누르면 3년 폴더는 원래대로
+  // 메인 resize 내용 줄바꿈
+  window.addEventListener('resize', function () {
+    if (innerWidth <= 676) {
+      subtitle.innerHTML = `
+      개발자를 꿈꾸는 배진화의 포트폴리오 페이지입니다. 2023년 2월, 대구 그린아트 컴퓨터 학원에서 기업 요구를 반영한 디지털비즈니스 웹앱(UX)디자인 & 개발자 양성과정을 수료했습니다. 현재는 리액트를 공부하며 포트폴리오를 채워 나가고 있습니다.`
+    } else {
+      subtitle.innerHTML = `
+      <p>
+        개발자를 꿈꾸는 배진화의 포트폴리오 페이지입니다. 2023년 2월,
+        대구 그린아트 컴퓨터 <br />학원에서 기업 요구를 반영한
+        디지털비즈니스 웹앱(UX)디자인 & 개발자 양성과정을 수료<br />했습니다.
+        현재는 리액트를 공부하며 포트폴리오를 채워 나가고 있습니다.
+      </p>
+              `
+    }
+  })
+};

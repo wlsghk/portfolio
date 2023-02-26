@@ -234,11 +234,25 @@ body {
     }
 }
 
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 800px) {
     .intro-title {
-        font-size: 30px;
+        font-size: 5.63vw;
     }
 }
+
+@media screen and (max-width: 735px) {
+    .intro-box {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .intro-subtitle {
+        text-align: justify;
+    }
+}
+
 
 /* 스킬 */
 .skills {
