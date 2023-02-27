@@ -3,7 +3,7 @@
         "id": 0,
         "title": "어서와, 대구는 처음이지?",
         "subtitle": "대구 여행 브랜딩 사이트입니다. 랜딩 페이지(first)와 상세 페이지(detail)를 담당했습니다. <br />(제작 인원 2명, 제작 기간 1달, 기여도 50%)",
-        "image": "../img/대구.png",
+        "image": "./img/대구.png",
         "link": "https://wlsghk.github.io/firstProject/html/first.html",
         "github": "https://github.com/wlsghk/firstProject"
     },
@@ -11,7 +11,7 @@
         "id": 1,
         "title": "How you Feel Today?",
         "subtitle": "여섯 가지 감정에 따라 품목을 나누어 판매하는 사이트입니다. 메인 페이지를 담당했습니다. <br />(제작 인원 4명, 제작 기간 1달, 기여도 20%)",
-        "image": "../img/hyft.png",
+        "image": "./img/hyft.png",
         "link": "http://hyft.kr/",
         "github": "https://github.com/wlsghk/lastProject"
     },
@@ -19,7 +19,7 @@
         "id": 2,
         "title": "도시락통",
         "subtitle": "도시락통 사이트 클론코딩입니다. 개인적인 스터디용으로 제작했습니다.<br />(제작 기간 9일)",
-        "image": "../img/도시락통.png",
+        "image": "./img/도시락통.png",
         "link": "https://wlsghk.github.io/dosiraktong/index.html",
         "github": "https://github.com/wlsghk/dosiraktong"
     },
@@ -27,7 +27,7 @@
         "id": 2,
         "title": "포트폴리오 페이지",
         "subtitle": "저의 소개와 기술, 비전을 담은 현재 포트폴리오 페이지입니다. <br />(제작 기간)",
-        "image": "../img/포트폴리오.png",
+        "image": "./img/포트폴리오.png",
         "link": "#",
         "github": "https://github.com/wlsghk/portfolio"
     }
