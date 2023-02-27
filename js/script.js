@@ -4,6 +4,8 @@ window.onload = function () {
   const threeYears = document.querySelector(".vision-folder-3 > img");
   const subtitle = document.querySelector('.intro-subtitle');
   const skillsBox = document.querySelector('.skills-box');
+  const projects = document.querySelector('.nav-projects');
+  const vision = document.querySelector('.nav-vision > a');
 
   // aos 연결
   AOS.init();
@@ -171,4 +173,10 @@ window.onload = function () {
       `;
     }
   })
+
+  // 네비 바 클릭하면 위치 이동
+  const projectsStart = document.querySelector('.projects-box');
+  projects.addEventListener("click", function () {
+    threeYears.scrollIntoView({ behavior: "smooth" });
+  });
 };
