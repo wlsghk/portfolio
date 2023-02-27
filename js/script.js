@@ -11,7 +11,7 @@ window.onload = function () {
   AOS.init();
 
   // projects json 연결
-  fetch("./assets/project.json")
+  fetch("./project.json")
     .then((res) => res.json())
     .then((result) => {
       makeList(result);
@@ -175,8 +175,8 @@ window.onload = function () {
   })
 
   // 네비 바 클릭하면 위치 이동
-  const projectsStart = document.querySelector('.projects-txt');
-  projects.addEventListener("click", function () {
-    projectsStart.scrollIntoView({ behavior: "smooth" });
-  });
+
+  projects.addEventListener('click', function () {
+    window.scrollTo({ top: 1100, behavior: 'smooth' });
+  })
 };
