@@ -3,7 +3,7 @@
         "id": 0,
         "title": "어서와, 대구는 처음이지?",
         "subtitle": "대구 여행 브랜딩 사이트입니다. 랜딩 페이지(first)와 상세 페이지(detail)를 담당했습니다. <br />(제작 인원 2명, 제작 기간 1달, 기여도 50%)",
-        "image": "./img/대구.png",
+        "image": "../img/대구.png",
         "link": "https://wlsghk.github.io/firstProject/html/first.html",
         "github": "https://github.com/wlsghk/firstProject"
     },
