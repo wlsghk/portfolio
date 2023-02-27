@@ -3,6 +3,7 @@ window.onload = function () {
   const oneYears = document.querySelector(".vision-folder-1 > img");
   const threeYears = document.querySelector(".vision-folder-3 > img");
   const subtitle = document.querySelector('.intro-subtitle');
+  const skillsBox = document.querySelector('.skills-box');
 
   // aos 연결
   AOS.init();
@@ -41,6 +42,24 @@ window.onload = function () {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
     },
   });
 
@@ -121,8 +140,8 @@ window.onload = function () {
   // 메인 resize 내용 줄바꿈
   window.addEventListener('resize', function () {
     if (innerWidth <= 676) {
-      subtitle.innerHTML = `
-      개발자를 꿈꾸는 배진화의 포트폴리오 페이지입니다. 2023년 2월, 대구 그린아트 컴퓨터 학원에서 기업 요구를 반영한 디지털비즈니스 웹앱(UX)디자인 & 개발자 양성과정을 수료했습니다. 현재는 리액트를 공부하며 포트폴리오를 채워 나가고 있습니다.`
+      subtitle.innerHTML = `<p>
+      개발자를 꿈꾸는 배진화의 포트폴리오 페이지입니다. 2023년 2월, 대구 그린아트 컴퓨터 학원에서 기업 요구를 반영한 디지털비즈니스 웹앱(UX)디자인 & 개발자 양성과정을 수료했습니다. 현재는 리액트를 공부하며 포트폴리오를 채워 나가고 있습니다.</p>`
     } else {
       subtitle.innerHTML = `
       <p>
@@ -131,7 +150,25 @@ window.onload = function () {
         디지털비즈니스 웹앱(UX)디자인 & 개발자 양성과정을 수료<br />했습니다.
         현재는 리액트를 공부하며 포트폴리오를 채워 나가고 있습니다.
       </p>
-              `
+    `;
+    }
+  })
+
+  // 스킬 테이블 resize 배치 변경
+  window.addEventListener('resize', function () {
+    if (innerWidth <= 688) {
+      skillsBox.innerHTML = `
+      <tr><td class="html">HTML</td><td class="css">CSS</td></tr>
+      <tr><td class="js">JavaScript</td><td class="react">React.js</td></tr>`
+    } else {
+      skillsBox.innerHTML = `
+      <tr>
+        <td class="html">HTML</td>
+        <td class="css">CSS</td>
+        <td class="js">JavaScript</td>
+        <td class="react">React.js</td>
+      </tr>
+      `;
     }
   })
 };

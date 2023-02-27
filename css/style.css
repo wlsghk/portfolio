@@ -251,6 +251,32 @@ body {
     .intro-subtitle {
         text-align: justify;
     }
+
+    .intro-img {
+        height: 500px;
+    }
+
+    .intro-img img {
+        width: 85.80vw;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .intro-box {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .intro-img {
+        width: 116.28vw;
+        margin-bottom: -90px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .intro-img {
+        margin-bottom: -130px;
+    }
 }
 
 
@@ -289,6 +315,27 @@ td {
         display: block;
         width: 655px;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .skills {
+        margin: 0 50px;
+    }
+
+    td {
+        padding: 12px 40px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .skills {
+        margin: 0 20px;
+    }
+
+    td {
+        padding: 10px 9.30vw;
     }
 }
 
@@ -405,6 +452,20 @@ td {
 @media screen and (max-width: 1650px) {
     .projects {
         margin-top: 400px;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .projects {
+        margin-top: 400px;
+    }
+
+    .projects-box-txt {
+        padding: 0 10px;
+    }
+
+    .projects-box-subtitle {
+        font-size: 16px;
     }
 }
 
