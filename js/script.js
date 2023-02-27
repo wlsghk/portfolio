@@ -9,7 +9,7 @@ window.onload = function () {
   AOS.init();
 
   // projects json 연결
-  fetch("./assets/project.json")
+  fetch("./project.json")
     .then((res) => res.json())
     .then((result) => {
       makeList(result);

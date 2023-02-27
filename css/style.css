@@ -279,6 +279,18 @@ body {
     }
 }
 
+@media screen and (max-width: 300px) {
+    .intro-img {
+        margin-bottom: -200px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .intro-img {
+        margin-bottom: -300px;
+    }
+}
+
 
 /* 스킬 */
 .skills {
@@ -451,7 +463,7 @@ td {
 /* 프로젝트 반응형 */
 @media screen and (max-width: 1650px) {
     .projects {
-        margin-top: 400px;
+        margin-top: 24.24vw;
     }
 }
 
@@ -460,12 +472,41 @@ td {
         margin-top: 400px;
     }
 
-    .projects-box-txt {
-        padding: 0 10px;
-    }
-
     .projects-box-subtitle {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .projects-box-txt {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .projects {
+        margin-top: 200px;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .projects {
+        margin-top: 160px;
+
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .projects {
+        padding-left: 20px;
+        padding-top: 30px;
+        margin-top: 50px;
+        margin-bottom: -100px;
+    }
+
+    .projects-box-header {
+        font-size: 17px;
     }
 }
 
@@ -522,10 +563,10 @@ td {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1000px;
-    height: 500px;
+    width: 52.08vw;
+    height: 26.04vw;
     background: #fff;
-    margin: 100px 0px 100px 250px;
+    margin: 100px 0px 100px 13.02vw;
     border-radius: 30px;
     box-shadow: 33px 33px 0px 7px #000;
     padding: 100px;
@@ -551,5 +592,64 @@ td {
 
     to {
         border-right: 2px solid #777;
+    }
+}
+
+/* 비전 반응형 */
+@media screen and (max-width: 1024px) {
+    .vision-right-box {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .vision {
+        margin: 0 50px;
+    }
+
+    .vision-box {
+        flex-direction: column;
+    }
+
+    .vision-left-icon {
+        display: inherit;
+    }
+
+    .vision-right-box {
+        margin-left: 0px;
+        width: 80.65vw;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .vision {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .vision {
+        margin: 0 20px;
+    }
+
+    .vision-left-icon {
+        margin-top: 60px;
+    }
+
+    .vision-right-box {
+        padding: 30px;
+        margin-top: 60px;
+    }
+
+    .vision-right-txt {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .vision-right-txt {
+        line-height: 1.1;
+        font-size: 15px;
     }
 }
