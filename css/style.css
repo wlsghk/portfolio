@@ -128,6 +128,36 @@ body {
     cursor: pointer;
 }
 
+/* 상단 반응형 */
+@media screen and (max-width: 888px) {
+    .nav-main {
+        margin-left: 14.64vw;
+    }
+}
+
+@media screen and (max-width: 730px) {
+
+    .nav-main,
+    .nav-vision,
+    .nav-projects {
+        display: none;
+    }
+
+    .nav-blog {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .nav {
+        gap: 30px;
+    }
+
+    .nav-blog {
+        margin-left: 20px;
+    }
+}
+
 /* 퍼스트 */
 .first {
     position: relatvie;
