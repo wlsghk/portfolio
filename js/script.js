@@ -4,14 +4,14 @@ window.onload = function () {
   const threeYears = document.querySelector(".vision-folder-3 > img");
   const subtitle = document.querySelector('.intro-subtitle');
   const skillsBox = document.querySelector('.skills-box');
-  const projects = document.querySelector('.nav-projects');
-  const vision = document.querySelector('.nav-vision > a');
+  const navProjects = document.querySelector('.nav-projects');
+  const navVision = document.querySelector('.nav-vision');
 
   // aos 연결
   AOS.init();
 
   // projects json 연결
-  fetch("./assets/project.json")
+  fetch("assets/project.json")
     .then((res) => res.json())
     .then((result) => {
       makeList(result);
@@ -175,8 +175,12 @@ window.onload = function () {
   })
 
   // 네비 바 클릭하면 위치 이동
-
-  projects.addEventListener('click', function () {
-    window.scrollTo({ top: 1100, behavior: 'smooth' });
+  const projects = document.querySelector('.projects');
+  const vision = document.querySelector('.vision');
+  navProjects.addEventListener('click', function () {
+    projects.scrollIntoView({ behavior: 'smooth' });
+  })
+  navVision.addEventListener('click', function () {
+    vision.scrollIntoView({ behavior: 'smooth' });
   })
 };

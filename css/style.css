@@ -124,6 +124,7 @@ body {
     font-family: 'DungGeunMo';
     font-size: 20px;
     color: #fff;
+    cursor: pointer;
 }
 
 /* 인트로 */
@@ -534,8 +535,8 @@ td {
     display: block;
     width: 100%;
     height: 100vh;
-    margin: 0 130px;
     padding-top: 130px;
+    padding-left: 130px;
 }
 
 .vision-title {
@@ -622,7 +623,7 @@ td {
 
 @media screen and (max-width: 930px) {
     .vision {
-        margin: 0 50px;
+        padding-left: 50px;
         padding-top: 0px;
     }
 
@@ -655,7 +656,7 @@ td {
 
 @media screen and (max-width: 430px) {
     .vision {
-        margin: 0 20px;
+        padding-left: 20px;
     }
 
     .vision-left-icon {
