@@ -6,6 +6,8 @@ window.onload = function () {
   const skillsBox = document.querySelector('.skills-box');
   const navProjects = document.querySelector('.nav-projects');
   const navVision = document.querySelector('.nav-vision');
+  const intro = document.querySelector('.intro');
+  const header = document.querySelector('.header');
 
   // aos 연결
   AOS.init();
@@ -182,5 +184,20 @@ window.onload = function () {
   })
   navVision.addEventListener('click', function () {
     vision.scrollIntoView({ behavior: 'smooth' });
+  })
+
+  // 엔터 키 누르면 인트로 스크롤
+  window.addEventListener('keyup', e => {
+    if (e.key === 'Enter') {
+      intro.scrollIntoView({ behavior: 'smooth' });
+    }
+  })
+
+  window.addEventListener('scroll', function () {
+    if (this.scrollY > 1080) {
+      header.style.display = "block";
+    } else {
+      header.style.display = "none";
+    }
   })
 };
