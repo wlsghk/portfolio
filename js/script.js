@@ -132,13 +132,13 @@ window.onload = function () {
   let running = setTimeout(typing, 0);
 
   oneYears.addEventListener('click', function () {
-    this.src = "../icon/openFolder.png"
-    threeYears.src = "../icon/folder.png"
+    this.src = "icon/openFolder.png"
+    threeYears.src = "icon/folder.png"
   })
 
   threeYears.addEventListener('click', function () {
-    this.src = "../icon/openFolder.png"
-    oneYears.src = "../icon/folder.png"
+    this.src = "icon/openFolder.png"
+    oneYears.src = "icon/folder.png"
   })
 
   // 메인 resize 내용 줄바꿈
