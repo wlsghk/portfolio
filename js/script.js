@@ -175,8 +175,8 @@ window.onload = function () {
   })
 
   // 네비 바 클릭하면 위치 이동
-  const projectsStart = document.querySelector('.projects-box');
+  const projectsStart = document.querySelector('.projects-txt');
   projects.addEventListener("click", function () {
-    threeYears.scrollIntoView({ behavior: "smooth" });
+    projectsStart.scrollIntoView({ behavior: "smooth" });
   });
 };
