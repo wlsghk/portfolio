@@ -10,7 +10,7 @@
     {
         "id": 1,
         "title": "How you Feel Today?",
-        "subtitle": "여섯 가지 감정에 따라 품목을 나누어 판매하는 사이트입니다. 메인 페이지를 담당했습니다. <br />(제작 인원 4명, 제작 기간 1달, 기여도 20%)",
+        "subtitle": "여섯 가지 감정에 따라 품목을 나누어 판매하는 사이트입니다. 메인 페이지를 담당했습니다. <br />(제작 인원 4명, 제작 기간 1달, 기여도 25%)",
         "image": "https://github.com/wlsghk/portfolio/blob/main/img/hyft.PNG?raw=true",
         "link": "http://hyft.kr/",
         "github": "https://github.com/wlsghk/lastProject"
@@ -26,7 +26,7 @@
     {
         "id": 2,
         "title": "포트폴리오 페이지",
-        "subtitle": "저의 소개와 기술, 비전을 담은 현재 포트폴리오 페이지입니다. <br />(제작 기간)",
+        "subtitle": "저의 소개와 기술, 비전을 담은 현재 포트폴리오 페이지입니다. <br />(제작 기간 15일)",
         "image": "https://github.com/wlsghk/portfolio/blob/main/img/portfolio.png?raw=true",
         "link": "#",
         "github": "https://github.com/wlsghk/portfolio"

@@ -194,7 +194,7 @@ window.onload = function () {
   })
 
   window.addEventListener('scroll', function () {
-    if (this.scrollY > 1080) {
+    if (this.scrollY > 960) {
       header.style.display = "block";
     } else {
       header.style.display = "none";
