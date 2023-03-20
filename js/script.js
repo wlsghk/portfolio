@@ -4,6 +4,7 @@ window.onload = function () {
     const threeYears = document.querySelector(".vision-folder-3 > img");
     const subtitle = document.querySelector('.intro-subtitle');
     const skillsBox = document.querySelector('.skills-box');
+    const navMain = document.querySelector('.nav-main > img');
     const navProjects = document.querySelector('.nav-projects');
     const navVision = document.querySelector('.nav-vision');
     const intro = document.querySelector('.intro');
@@ -133,17 +134,21 @@ window.onload = function () {
     // 네비 바 클릭하면 위치 이동
     const projects = document.querySelector('.projects');
     const introduce = document.querySelector('.introduce');
+    const introSecret = document.querySelector('.intro-secret');
     navProjects.addEventListener('click', function () {
         projects.scrollIntoView({ behavior: 'smooth' });
     })
     navVision.addEventListener('click', function () {
         introduce.scrollIntoView({ behavior: 'smooth' });
     })
+    navMain.addEventListener('click', function () {
+        introSecret.scrollIntoView({ behavior: 'smooth' });
+    })
 
     // 엔터 키 누르면 인트로 스크롤
     window.addEventListener('keyup', e => {
         if (e.key === 'Enter') {
-            intro.scrollIntoView({ behavior: 'smooth' });
+            introSecret.scrollIntoView({ behavior: 'smooth' });
         }
     })
 

@@ -317,6 +317,10 @@ body {
     height: 100vh;
 }
 
+.intro-secret {
+    visibility: hidden;
+}
+
 .intro-box {
     display: flex;
     flex-wrap: wrap;
