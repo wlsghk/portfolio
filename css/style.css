@@ -11,18 +11,18 @@
 }
 
 @font-face {
-    font-family: 'yg-jalnan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'bitbit';
+    src: url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'), url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2');
+}
+
+/* 폰트 연결 끝 */
 
 * {
     margin: 0;
@@ -45,6 +45,12 @@ img {
     vertical-align: middle;
 }
 
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
 html {
     font-size: 16px;
     -ms-overflow-style: none;
@@ -64,7 +70,31 @@ body {
     background: #eee;
 }
 
-/* 공통요소 */
+/* 스와이퍼 */
+.first-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+/* 공통 요소 */
 .inner {
     position: relatvie;
     display: block;
@@ -76,28 +106,22 @@ body {
 .wrap {
     position: relative;
     display: block;
-    /* 원페이지스크롤 */
-    /* width: 100%;
-    height: 100vh;
-    overflow: auto;
-    scroll-snap-type: y mandatory; */
 }
 
-/* 원페이지스크롤 */
-/* section {
-    scroll-snap-align: center;
-} */
+/* 공통 요소 끝 */
 
 /* 상단 */
 .header {
     position: fixed;
-    left: 0;
-    top: 0;
     display: none;
     width: 100%;
     height: 45px;
     z-index: 9999;
     background: #1D1D1D;
+}
+
+.header.active {
+    display: block;
 }
 
 .header .inner {
@@ -158,104 +182,132 @@ body {
     }
 }
 
+/* 상단 끝 */
 /* 퍼스트 */
+.first nav {
+    background-color: #a8a8a8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.first ul {
+    padding: 0.15rem 2rem;
+    display: flex;
+    font-size: 24px;
+}
+
+.first li {
+    margin-left: 1rem;
+}
+
+.help {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+}
+
 .first {
-    position: relatvie;
-    display: block;
     width: 100%;
     height: 100vh;
     font-family: 'DungGeunMo';
-    color: #fff;
-    background: #ccc;
-    font-size: 30px;
-}
-
-.first-container {
+    background-color: #0b00a8;
+    font-size: 28px;
+    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+}
+
+.first:before {
+    content: "Baevolution";
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #a8a8a8;
+    color: #0b00a8;
+    padding: 0 0.75rem;
 }
 
 .msg {
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.msg p {
-    text-align: left;
     line-height: 2;
-}
-
-.first-continue {
-    text-align: center !important;
-}
-
-.first-highlight {
-    color: rgb(1, 2, 172);
-    background-color: rgb(172, 173, 168);
-    padding: 3px;
-    width: 170px;
-    margin: 0 auto;
+    color: #a8a8a8;
 }
 
 .blink {
-    animation: blink 1s steps(2, start) infinite;
+    animation: blink 0.5s infinite;
+    font-size: 2.5rem;
+    color: #a8a8a8;
 }
+
 
 @keyframes blink {
     to {
-        visibility: hidden;
+        opacity: 0;
     }
+}
+
+.first-footer {
+    background-color: #00a7a8;
+    color: #fff;
+    padding: 0.05rem 1rem;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 24px;
+}
+
+.first-footer span {
+    margin-left: 2rem;
 }
 
 /* 퍼스트 반응형 */
-@media screen and (max-width: 1445px) {
+@media screen and (max-width: 720px) {
+
+    .first li,
+    .first-footer {
+        font-size: 20px;
+    }
+
     .first {
-        font-size: 27px;
+        font-size: 24px;
     }
 
-    .first-highlight {
-        width: 153px;
-    }
-}
-
-@media screen and (max-width: 670px) {
-    .first {
-        font-size: 23px;
-    }
-
-    .msg p {
-        line-height: 1.5;
-    }
-
-    .first-highlight {
-        width: 133px;
+    .first:before {
+        top: 2.5%;
     }
 }
 
-@media screen and (max-width: 535px) {
-    .msg {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
+@media screen and (max-width: 580px) {
 
-@media screen and (max-width: 400px) {
-    .msg {
-        padding-left: 20px;
-        padding-right: 20px;
+    .first li,
+    .first-footer {
+        font-size: 18px;
     }
 
     .first {
         font-size: 20px;
     }
 
-    .first-highlight {
-        width: 115px;
+    .first:before {
+        top: 2%;
     }
 }
+
+@media screen and (max-width: 470px) {
+
+    .first li,
+    .first-footer {
+        font-size: 16px;
+    }
+
+    .first {
+        font-size: 18px;
+    }
+}
+
+/* 퍼스트 끝 */
 
 /* 인트로 */
 .intro {
@@ -269,11 +321,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 150px 130px 0 130px;
+    /*  7.03vw 6.77vw 0 6.77vw */
+    margin: 135px 130px 0 130px;
 }
 
 .intro-title {
-    font-family: 'yg-jalnan';
+    font-family: 'bitbit';
     font-size: 55px;
     line-height: 1.5;
 }
@@ -306,31 +359,23 @@ body {
 }
 
 /* 인트로 반응형 */
-@media screen and (max-width: 1650px) {
-    .intro .inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
+@media screen and (max-width: 1614px) {
     .intro-box {
-        justify-content: center;
+        padding-top: none;
     }
 
     .intro-title {
-        padding-top: 0;
+        padding: 0px;
     }
 
     .intro-img {
-        margin-top: 15px;
-        margin-bottom: 70px;
+        height: 400px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .intro-box {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin: 13.18vw 12.70vw 0 12.70vw;
     }
 
     .intro-title {
@@ -338,22 +383,22 @@ body {
     }
 
     .intro-subtitle {
-        font-size: 15.5px;
+        font-size: 16px;
     }
 
     .intro-img img {
-        width: 640px;
+        width: 655px;
     }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 880px) {
     .intro-box {
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 12.73vw;
+        margin-right: 12.73vw;
     }
 
     .intro-title {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .intro-subtitle {
@@ -361,73 +406,31 @@ body {
     }
 
     .intro-img img {
-        width: 580px;
+        width: 575px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 769px) {
     .intro-title {
-        font-size: 5.63vw;
-    }
-}
-
-@media screen and (max-width: 735px) {
-    .intro-box {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-
-@media screen and (max-width: 676px) {
-    .intro-subtitle {
-        text-align: justify;
-    }
-
-    .intro-img {
-        height: 500px;
+        font-size: 36px;
     }
 
     .intro-img img {
-        width: 85.80vw;
+        width: 74.77vw;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .intro-title {
-        font-size: 33.78px;
+@media screen and (max-width: 769px) {
+    .intro-img {
+        height: 320px;
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 320px) {
     .intro-box {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    .intro-img {
-        width: 116.28vw;
-        margin-bottom: -90px;
+        margin-top: 60px;
     }
 }
-
-@media screen and (max-width: 400px) {
-    .intro-img {
-        margin-bottom: -130px;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .intro-img {
-        margin-bottom: -200px;
-    }
-}
-
-@media screen and (max-width: 200px) {
-    .intro-img {
-        margin-bottom: -300px;
-    }
-}
-
 
 /* 스킬 */
 .skills {
@@ -435,7 +438,7 @@ body {
 }
 
 .skills-txt {
-    font-family: 'yg-jalnan';
+    font-family: 'bitbit';
     font-size: 36px;
     margin-bottom: 10px;
 }
@@ -458,44 +461,52 @@ td {
 }
 
 /* 스킬 반응형 */
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1656px) {
     .skills {
-        padding: 0;
-        display: block;
-        width: 655px;
-        margin: 0 auto;
+        padding: 25px 0 0 130px;
     }
 }
 
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 1024px) {
     .skills {
-        margin: 0 50px;
+        padding-left: 12.70vw;
     }
 
     td {
-        padding: 12px 40px;
-        font-size: 17px;
+        padding: 12px 49px;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 880px) {
+    .skills-box {
+        font-size: 18px;
+    }
+
+    td {
+        padding: 12px 42.5px;
+    }
+}
+
+@media screen and (max-width: 769px) {
     .skills-txt {
-        font-size: 33.78px;
+        font-size: 30px;
+    }
+
+    .skills-box {
+        font-size: 15px;
     }
 }
 
-@media screen and (max-width: 430px) {
-    .skills {
-        margin: 0 20px;
-        margin-top: 30px;
-    }
-
+@media screen and (max-width: 400px) {
     td {
-        padding: 10px 9.30vw;
+        padding-left: 10.63vw;
+        padding-right: 10.63vw;
     }
 }
 
-/* 프로젝트 */
+/* 인트로 끝 */
+
+/* 프로젝트 시작 */
 .projects {
     position: relative;
     display: block;
@@ -505,18 +516,18 @@ td {
 }
 
 .projects-txt {
-    font-family: 'yg-jalnan';
+    font-family: 'bitbit';
     font-size: 36px;
     margin-bottom: 30px;
 }
 
 /* Swiper */
-.swiper {
+.second-swiper {
     width: 100%;
     height: 500px;
 }
 
-.swiper-slide {
+.projects-box {
     text-align: center;
     background: #fff;
     display: flex;
@@ -524,7 +535,7 @@ td {
     align-items: center;
 }
 
-.swiper-slide img {
+.peojects-box img {
     display: block;
     width: 100%;
     height: 100%;
@@ -578,7 +589,7 @@ td {
 }
 
 .projects-box-subtitle {
-    line-height: 1.6;
+    line-height: 1.5;
     font-size: 17px;
 }
 
@@ -594,6 +605,9 @@ td {
     bottom: 20px;
     color: #000;
     background: #F5F5F5;
+    font-family: 'DungGeunMo';
+    font-size: 21px;
+    letter-spacing: -0.8px;
 }
 
 .projects-link-demo {
@@ -605,15 +619,9 @@ td {
 }
 
 /* 프로젝트 반응형 */
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1024px) {
     .projects {
-        margin-top: 24.24vw;
-    }
-}
-
-@media screen and (max-width: 1650px) {
-    .projects {
-        margin-top: 400px;
+        padding-left: 12.70vw;
     }
 
     .projects-box-subtitle {
@@ -621,200 +629,30 @@ td {
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .projects-box-txt {
-        padding: 0 20px;
-    }
-}
+/* 프로젝트 끝 */
 
-@media screen and (max-width: 930px) {
-    .projects {
-        margin-top: 200px;
-        padding-left: 50px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .projects-txt {
-        font-size: 33.78px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .projects {
-        margin-top: 160px;
-
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .projects {
-        padding-left: 20px;
-        padding-top: 100px;
-        margin-top: 150px;
-        margin-bottom: -100px;
-    }
-
-    .projects-box-header {
-        font-size: 17px;
-    }
-}
-
-/* 비전 */
-.vision {
+/* 내 소개 */
+.introduce {
     position: relative;
     display: block;
     width: 100%;
     height: 100vh;
-    padding-top: 130px;
-    padding-left: 130px;
 }
 
-.vision-title {
-    font-family: 'yg-jalnan';
+.introduce .inner {
+    padding: 160px 0 0 130px;
+}
+
+.introduce-title {
+    font-family: 'bitbit';
     font-size: 36px;
-}
-
-.vision-box {
-    position: relative;
-    display: flex;
-}
-
-.vision-left-icon {
-    margin-top: 100px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.vision-left-icon img {
-    width: 100px;
-}
-
-.vision-folder-1 {
-    display: block;
-    width: 120px;
-}
-
-.vision-folder-common {
-    background: url(../icon/folder.png) no-repeat;
-    background-size: cover;
-}
-
-.vision-folder-common.active {
-    background: url(../icon/openFolder.png) no-repeat;
-    background-size: cover;
-}
-
-.vision-folder-title1 {
-    margin-bottom: 25px;
-}
-
-.vision-right-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52.08vw;
-    height: 26.04vw;
-    background: #fff;
-    margin: 100px 0px 100px 13.02vw;
-    border-radius: 30px;
-    box-shadow: 33px 33px 0px 7px #000;
-    padding: 100px;
-}
-
-.vision-right-txt {
-    font-family: 'DungGeunMo';
-    font-size: 20px;
-    line-height: 2;
-}
-
-.vision-right-txt::after {
-    content: '';
-    border-right: 2px solid #777;
-    animation: cursor .9s infinite steps(2);
-    margin-left: 0.4rem;
-}
-
-@keyframes cursor {
-    from {
-        border-right: 2px solid #222;
-    }
-
-    to {
-        border-right: 2px solid #777;
-    }
-}
-
-/* 비전 반응형 */
-@media screen and (max-width: 1024px) {
-    .vision-right-box {
-        padding: 80px;
-    }
-}
-
-@media screen and (max-width: 930px) {
-    .vision {
-        padding-left: 50px;
-        padding-top: 0px;
-    }
-
-    .vision-box {
-        flex-direction: column;
-    }
-
-    .vision-left-icon {
-        display: inherit;
-        margin-top: 50px;
-    }
-
-    .vision-right-box {
-        margin-top: 40px;
-        margin-left: 0px;
-        width: 80.65vw;
-        height: 400px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .vision-title {
-        font-size: 33.78px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .vision {
-        padding-top: 10px;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .vision {
-        padding-left: 20px;
-    }
-
-    .vision-left-icon {
-        margin-top: 60px;
-    }
-
-    .vision-right-box {
-        padding: 30px;
-        margin-top: 60px;
-    }
-
-    .vision-right-txt {
-        font-size: 17px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .vision-right-txt {
-        line-height: 1.1;
-        font-size: 15px;
-    }
+    margin-bottom: 30px;
 }
 
 /* 푸터 */
-footer {
+.footer {
+    position: absolute;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -825,7 +663,6 @@ footer {
     background: #222;
     line-height: 1.5;
     font-size: 20px;
-    margin-top: 50px;
 }
 
 /* 푸터 반응형 */
