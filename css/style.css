@@ -305,6 +305,10 @@ body {
     .first {
         font-size: 18px;
     }
+
+    .first:before {
+        top: 2.2%;
+    }
 }
 
 /* 퍼스트 끝 */
@@ -318,7 +322,7 @@ body {
 }
 
 .intro-secret {
-    visibility: hidden;
+    visibility: ;
 }
 
 .intro-box {
@@ -424,9 +428,10 @@ body {
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 480px) {
     .intro-img {
-        height: 320px;
+        height: 66.67vw;
+        overflow: hidden;
     }
 }
 
