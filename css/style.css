@@ -507,7 +507,7 @@ td {
     }
 
     .skills-box {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
@@ -638,10 +638,14 @@ td {
         padding-left: 12.70vw;
     }
 
-    .projects-text {}
-
     .projects-box-subtitle {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .projects-txt {
+        font-size: 30px;
     }
 }
 
@@ -664,6 +668,21 @@ td {
     font-size: 36px;
     margin-bottom: 30px;
 }
+
+/* 내 소개 반응형 */
+@media screen and (max-width: 1024px) {
+    .introduce .inner {
+        padding-left: 12.70vw;
+    }
+
+    @media screen and (max-width: 769px) {
+        .introduce-title {
+            font-size: 30px;
+        }
+    }
+}
+
+/* 내 소개 끝 */
 
 /* 푸터 */
 .footer {
