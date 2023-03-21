@@ -669,13 +669,19 @@ td {
 }
 
 .introduce .inner {
-    padding: 160px 0 0 130px;
+    padding: 110px 0 0 130px;
 }
 
 .introduce-title {
     font-family: 'bitbit';
     font-size: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.introduce-subtitle {
+    font-family: 'DungGeunMo';
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .introduce-box {
@@ -688,21 +694,29 @@ td {
 .introduce-first,
 .introduce-second,
 .introduce-third {
-    width: 20.83vw;
+    width: 27.83vw;
 }
 
 /* 내 소개 반응형 */
+@media screen and (max-width: 1590px) {
+    .introduce-box {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .introduce .inner {
         padding-left: 12.70vw;
     }
+}
 
-    @media screen and (max-width: 769px) {
-        .introduce-title {
-            font-size: 30px;
-        }
+@media screen and (max-width: 769px) {
+    .introduce-title {
+        font-size: 30px;
     }
 }
+
 
 /* 내 소개 끝 */
 

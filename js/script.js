@@ -9,6 +9,8 @@ window.onload = function () {
     const navVision = document.querySelector('.nav-vision');
     const intro = document.querySelector('.intro');
     const header = document.querySelector('.header');
+    const introduceFirstImg = document.querySelector('.introduce-first > img');
+    const introduceSecondImg = document.querySelector('.introduce-second > img')
 
     // aos 연결
     AOS.init();
@@ -160,4 +162,19 @@ window.onload = function () {
         }
         // console.log(e.deltaY, e.deltaX);
     })
+
+    // introduce 이미지에 마우스오버 시 이미지 변경
+    introduceFirstImg.addEventListener("mouseover", (e) => {
+        introduceFirstImg.src = "./img/health.png";
+    });
+    introduceFirstImg.addEventListener("mouseout", (e) => {
+        introduceFirstImg.src = "./img/before.png";
+    });
+
+    introduceSecondImg.addEventListener("mouseover", (e) => {
+        introduceSecondImg.src = "./img/travel.png";
+    });
+    introduceSecondImg.addEventListener("mouseout", (e) => {
+        introduceSecondImg.src = "./img/before.png";
+    });
 }
