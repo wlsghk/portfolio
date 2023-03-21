@@ -420,18 +420,15 @@ body {
 
 @media screen and (max-width: 769px) {
     .intro-title {
-        font-size: 36px;
+        font-size: 30px;
+    }
+
+    .intro-subtitle {
+        font-size: 13px;
     }
 
     .intro-img img {
         width: 74.77vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .intro-img {
-        height: 66.67vw;
-        overflow: hidden;
     }
 }
 
