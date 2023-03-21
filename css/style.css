@@ -705,6 +705,33 @@ td {
     }
 }
 
+@media screen and (max-width: 1150px) {
+    .introduce-box {
+        display: grid;
+        grid-template-areas:
+            " a b "
+            " . . "
+            "c c";
+        justify-content: start;
+    }
+
+    .introduce-first {
+        grid-area: a;
+        width: 293px;
+    }
+
+    .introduce-second {
+        grid-area: b;
+        width: 293px;
+    }
+
+    .introduce-third {
+        grid-area: c;
+        width: 596px;
+        height: 225px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .introduce .inner {
         padding-left: 12.70vw;
@@ -714,6 +741,21 @@ td {
 @media screen and (max-width: 769px) {
     .introduce-title {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .introduce-subtitle {
+        font-size: 13px;
+    }
+
+    .introduce-first,
+    .introduce-second {
+        width: 40.14vw;
+    }
+
+    .introduce-third {
+        width: 81.64vw;
     }
 }
 
