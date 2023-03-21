@@ -322,7 +322,7 @@ body {
 }
 
 .intro-secret {
-    visibility: ;
+    visibility: hidden;
 }
 
 .intro-box {
@@ -425,10 +425,18 @@ body {
 
     .intro-subtitle {
         font-size: 13px;
+        text-align: justify;
     }
 
     .intro-img img {
         width: 74.77vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro-img {
+        height: 83.33vw;
+        overflow: hidden;
     }
 }
 
@@ -630,6 +638,8 @@ td {
         padding-left: 12.70vw;
     }
 
+    .projects-text {}
+
     .projects-box-subtitle {
         font-size: 16px;
     }
@@ -673,7 +683,7 @@ td {
 
 /* 푸터 반응형 */
 @media screen and (max-width: 430px) {
-    footer {
+    .footer {
         font-size: 14px;
     }
 }
