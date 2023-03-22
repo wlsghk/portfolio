@@ -713,6 +713,7 @@ td {
             " . . "
             "c c";
         justify-content: start;
+        grid-gap: 2px;
     }
 
     .introduce-first {
@@ -727,7 +728,7 @@ td {
 
     .introduce-third {
         grid-area: c;
-        width: 596px;
+        width: 588px;
         height: 225px;
     }
 }
@@ -755,10 +756,10 @@ td {
     }
 
     .introduce-third {
-        width: 81.64vw;
+        width: 80.55vw;
+        height: 30.82vw;
     }
 }
-
 
 /* 내 소개 끝 */
 

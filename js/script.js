@@ -11,6 +11,7 @@ window.onload = function () {
     const header = document.querySelector('.header');
     const introduceFirstImg = document.querySelector('.introduce-first > img');
     const introduceSecondImg = document.querySelector('.introduce-second > img')
+    const introduceThirdImg = document.querySelector('.introduce-third > img');
 
     // aos 연결
     AOS.init();
@@ -176,5 +177,12 @@ window.onload = function () {
     });
     introduceSecondImg.addEventListener("mouseout", (e) => {
         introduceSecondImg.src = "./img/before.png";
+    });
+
+    introduceThirdImg.addEventListener("mouseover", (e) => {
+        introduceThirdImg.src = "./img/routine1.gif";
+    });
+    introduceThirdImg.addEventListener("mouseout", (e) => {
+        introduceThirdImg.src = "./img/before.png";
     });
 }
