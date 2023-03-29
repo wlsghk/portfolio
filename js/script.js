@@ -159,7 +159,7 @@ window.onload = function () {
         if (innerWidth <= 688) {
             skillsBox.innerHTML = `
       <tr><td class="html">HTML</td><td class="css">CSS</td></tr>
-      <tr><td class="js">JavaScript</td><td class="react">React.js</td></tr>`
+      <tr><td class="js">JavaScript</td><td class="react">React.js</td></tr><tr><td class="git">Git</td><td></td></tr>`
         } else {
             skillsBox.innerHTML = `
       <tr>
@@ -167,6 +167,7 @@ window.onload = function () {
         <td class="css">CSS</td>
         <td class="js">JavaScript</td>
         <td class="react">React.js</td>
+        <td class="git">Git</td>
       </tr>
       `;
         }
