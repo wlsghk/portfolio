@@ -1,0 +1,836 @@
+@charset "utf-8";
+
+/* 폰트 연결 */
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+html {
+    font-size: 16px;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    color: #222;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    word-break: keep-all;
+    background: #eee;
+}
+
+/* 공통요소 */
+.inner {
+    position: relatvie;
+    display: block;
+    width: 100%;
+    /* block 요소 가운데 정렬 */
+    margin: 0 auto;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+    /* 원페이지스크롤 */
+    /* width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory; */
+}
+
+/* 원페이지스크롤 */
+/* section {
+    scroll-snap-align: center;
+} */
+
+/* 상단 */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 45px;
+    z-index: 9999;
+    background: #1D1D1D;
+}
+
+.header .inner {
+    max-width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.nav-main {
+    margin-left: 130px;
+}
+
+.nav-main,
+.nav-github,
+.nav-projects,
+.nav-vision,
+.nav-blog {
+    font-family: 'DungGeunMo';
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 상단 반응형 */
+@media screen and (max-width: 888px) {
+    .nav-main {
+        margin-left: 14.64vw;
+    }
+}
+
+@media screen and (max-width: 730px) {
+
+    .nav-main,
+    .nav-vision,
+    .nav-projects {
+        display: none;
+    }
+
+    .nav-blog {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .nav {
+        gap: 30px;
+    }
+
+    .nav-blog {
+        margin-left: 20px;
+    }
+}
+
+/* 퍼스트 */
+.first {
+    position: relatvie;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    font-family: 'DungGeunMo';
+    color: #fff;
+    background: #ccc;
+    font-size: 30px;
+}
+
+.first-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.msg {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.msg p {
+    text-align: left;
+    line-height: 2;
+}
+
+.first-continue {
+    text-align: center !important;
+}
+
+.first-highlight {
+    color: rgb(1, 2, 172);
+    background-color: rgb(172, 173, 168);
+    padding: 3px;
+    width: 170px;
+    margin: 0 auto;
+}
+
+.blink {
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* 퍼스트 반응형 */
+@media screen and (max-width: 1445px) {
+    .first {
+        font-size: 27px;
+    }
+
+    .first-highlight {
+        width: 153px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .first {
+        font-size: 23px;
+    }
+
+    .msg p {
+        line-height: 1.5;
+    }
+
+    .first-highlight {
+        width: 133px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .msg {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .msg {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .first {
+        font-size: 20px;
+    }
+
+    .first-highlight {
+        width: 115px;
+    }
+}
+
+/* 인트로 */
+.intro {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 150px 130px 0 130px;
+}
+
+.intro-title {
+    font-family: 'yg-jalnan';
+    font-size: 55px;
+    line-height: 1.5;
+}
+
+.intro-subtitle {
+    font-family: 'DungGeunMo';
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.intro-title,
+.intro-subtitle {
+    padding-top: 100px;
+}
+
+.intro-empty {
+    width: 300px;
+    height: 200px;
+    background: #F5F5F5;
+}
+
+.intro-img {
+    display: block;
+    height: 630px;
+    overflow: hidden;
+}
+
+.intro-img img {
+    width: 700px;
+}
+
+/* 인트로 반응형 */
+@media screen and (max-width: 1650px) {
+    .intro .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro-box {
+        justify-content: center;
+    }
+
+    .intro-title {
+        padding-top: 0;
+    }
+
+    .intro-img {
+        margin-top: 15px;
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .intro-box {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .intro-title {
+        font-size: 50px;
+    }
+
+    .intro-subtitle {
+        font-size: 15.5px;
+    }
+
+    .intro-img img {
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .intro-box {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .intro-title {
+        font-size: 45px;
+    }
+
+    .intro-subtitle {
+        font-size: 14px;
+    }
+
+    .intro-img img {
+        width: 580px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro-title {
+        font-size: 5.63vw;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .intro-box {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .intro-subtitle {
+        text-align: justify;
+    }
+
+    .intro-img {
+        height: 500px;
+    }
+
+    .intro-img img {
+        width: 85.80vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro-title {
+        font-size: 33.78px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .intro-box {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .intro-img {
+        width: 116.28vw;
+        margin-bottom: -90px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .intro-img {
+        margin-bottom: -130px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .intro-img {
+        margin-bottom: -200px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .intro-img {
+        margin-bottom: -300px;
+    }
+}
+
+
+/* 스킬 */
+.skills {
+    padding: 30px 0 0 130px;
+}
+
+.skills-txt {
+    font-family: 'yg-jalnan';
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.skills-box {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* 스킬 테이블 */
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #222;
+    padding: 12px 50px;
+    background: #fff;
+}
+
+/* 스킬 반응형 */
+@media screen and (max-width: 1650px) {
+    .skills {
+        padding: 0;
+        display: block;
+        width: 655px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .skills {
+        margin: 0 50px;
+    }
+
+    td {
+        padding: 12px 40px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skills-txt {
+        font-size: 33.78px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .skills {
+        margin: 0 20px;
+        margin-top: 30px;
+    }
+
+    td {
+        padding: 10px 9.30vw;
+    }
+}
+
+/* 프로젝트 */
+.projects {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 160px 0 0 130px;
+}
+
+.projects-txt {
+    font-family: 'yg-jalnan';
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #222;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    color: #fff;
+}
+
+/* Swiper 끝 */
+
+.projects-box {
+    position: relative;
+    display: block;
+    width: 700px;
+    height: 550px;
+    background: #fff;
+    border: 1px solid #222;
+}
+
+.projects-box-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background: #c3c3c3;
+    border-bottom: 1px solid #222;
+    font-family: 'DungGeunMo';
+    font-size: 19px;
+    padding-left: 10px;
+}
+
+.projects-box-img {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 35px;
+    background: black;
+}
+
+.projects-box-txt {
+    margin-top: 300px;
+    text-align: left;
+    padding: 0 30px;
+}
+
+.projects-box-subtitle {
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+.projects-link-demo,
+.projects-link-github {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #222;
+    bottom: 20px;
+    color: #000;
+    background: #F5F5F5;
+}
+
+.projects-link-demo {
+    left: 30px;
+}
+
+.projects-link-github {
+    left: 140px;
+}
+
+/* 프로젝트 반응형 */
+@media screen and (max-width: 1650px) {
+    .projects {
+        margin-top: 24.24vw;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .projects {
+        margin-top: 400px;
+    }
+
+    .projects-box-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .projects-box-txt {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .projects {
+        margin-top: 200px;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects-txt {
+        font-size: 33.78px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .projects {
+        margin-top: 160px;
+
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .projects {
+        padding-left: 20px;
+        padding-top: 100px;
+        margin-top: 150px;
+        margin-bottom: -100px;
+    }
+
+    .projects-box-header {
+        font-size: 17px;
+    }
+}
+
+/* 비전 */
+.vision {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding-top: 130px;
+    padding-left: 130px;
+}
+
+.vision-title {
+    font-family: 'yg-jalnan';
+    font-size: 36px;
+}
+
+.vision-box {
+    position: relative;
+    display: flex;
+}
+
+.vision-left-icon {
+    margin-top: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.vision-left-icon img {
+    width: 100px;
+}
+
+.vision-folder-1 {
+    display: block;
+    width: 120px;
+}
+
+.vision-folder-common {
+    background: url(../icon/folder.png) no-repeat;
+    background-size: cover;
+}
+
+.vision-folder-common.active {
+    background: url(../icon/openFolder.png) no-repeat;
+    background-size: cover;
+}
+
+.vision-folder-title1 {
+    margin-bottom: 25px;
+}
+
+.vision-right-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52.08vw;
+    height: 26.04vw;
+    background: #fff;
+    margin: 100px 0px 100px 13.02vw;
+    border-radius: 30px;
+    box-shadow: 33px 33px 0px 7px #000;
+    padding: 100px;
+}
+
+.vision-right-txt {
+    font-family: 'DungGeunMo';
+    font-size: 20px;
+    line-height: 2;
+}
+
+.vision-right-txt::after {
+    content: '';
+    border-right: 2px solid #777;
+    animation: cursor .9s infinite steps(2);
+    margin-left: 0.4rem;
+}
+
+@keyframes cursor {
+    from {
+        border-right: 2px solid #222;
+    }
+
+    to {
+        border-right: 2px solid #777;
+    }
+}
+
+/* 비전 반응형 */
+@media screen and (max-width: 1024px) {
+    .vision-right-box {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .vision {
+        padding-left: 50px;
+        padding-top: 0px;
+    }
+
+    .vision-box {
+        flex-direction: column;
+    }
+
+    .vision-left-icon {
+        display: inherit;
+        margin-top: 50px;
+    }
+
+    .vision-right-box {
+        margin-top: 40px;
+        margin-left: 0px;
+        width: 80.65vw;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .vision-title {
+        font-size: 33.78px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .vision {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .vision {
+        padding-left: 20px;
+    }
+
+    .vision-left-icon {
+        margin-top: 60px;
+    }
+
+    .vision-right-box {
+        padding: 30px;
+        margin-top: 60px;
+    }
+
+    .vision-right-txt {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .vision-right-txt {
+        line-height: 1.1;
+        font-size: 15px;
+    }
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    background: #222;
+    line-height: 1.5;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+/* 푸터 반응형 */
+@media screen and (max-width: 430px) {
+    footer {
+        font-size: 14px;
+    }
+}

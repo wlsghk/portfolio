@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        body {
+            cursor: none;
+        }
+
+        .cursor {
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            transition: background-color .2s, border-color .2s, border-radius .2s, transform .6s
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class='container'>
+        <div class="msg" align='center'>
+            <p class='highlight'>Baevolution</p>
+            <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">Welcome to my portfolio site. If you scroll
+                down, you can see the page I worked on. </p>
+            <p>Thank you for taking your precious time to look around.</p>
+            <p>* If you have any
+                problems, please contact me by email on footer.</p>
+            <br>
+            <p class="continue">Press ENTER key to continue <span class="blink">_</span></p>
+        </div>
+    </div>
+</body>
+<script>
+    // const cursor = document.querySelector('.cursor');
+    // cursor.addEventListener('mousemove', (e) => {
+    //     cursor.style.left = `${e.clientX}px`;
+    //     cursor.style.top = `${e.clientY}px`;
+    // });
+
+    AOS.init();
+</script>
+
+</html>

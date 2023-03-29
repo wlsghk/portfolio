@@ -13,8 +13,6 @@ window.onload = function () {
     const introduceSecondImg = document.querySelector('.introduce-second > img')
     const introduceThirdImg = document.querySelector('.introduce-third > img');
 
-    // aos 연결
-    AOS.init();
 
     // 원 페이지 Swiper 작동
     var firstwSwiper = new Swiper(".first-swiper", {
@@ -26,10 +24,50 @@ window.onload = function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        on: {
+            init: function () {
+                //aosClear();
+            },
+            slideChange: function () {
+                aosClear();
+            },
+            activeIndexChange: function (sp) {
+                console.log(sp.activeIndex);
+
+                setTimeout(function () {
+                    const $currentContainer = document.querySelector('.swiper-slide-active');
+                    const list = $currentContainer.querySelectorAll('[data-aos]');
+                    list.forEach(item => {
+                        item.classList.add('aos-animate');
+                    });
+
+                }, 200);
+
+
+
+            }
+        }
     });
 
+    function aosClear() {
+        console.log('aosClear');
+        const list = document.querySelectorAll('[data-aos]');
+        list.forEach(item => {
+            item.classList.remove('aos-animate');
+        });
+        AOS.init();
+        AOS.refresh();
+    }
+
+    document.addEventListener('aos:out', ({ detail }) => {
+        console.log('animated out', detail);
+    });
+
+
+
+
     // 랜딩 페이지 typing 효과
-    let content = `저의 포트폴리오 사이트에 오신 것을 환영합니다. \n 엔터 키를 누르면 작업물을 볼 수 있습니다. \n 귀중한 시간을 내어 구경해 주셔서 감사합니다. \n \t \n * 만약 어떤 문제를 발견한다면 \n 푸터에 있는 이메일로 연락해 주세요. \n \t \n Press ENTER key to continue`;
+    let content = `저의 포트폴리오 사이트에 오신 것을 환영합니다. \n 스크롤을 내리면 작업물을 볼 수 있습니다. \n 귀중한 시간을 내어 구경해 주셔서 감사합니다. \n \t \n * 만약 어떤 문제를 발견한다면 \n 푸터에 있는 이메일로 연락해 주세요. \n \t \n Scroll Down`;
     let typing = document.querySelector(".msg");
     let i = 0;
 

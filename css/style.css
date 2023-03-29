@@ -366,6 +366,21 @@ body {
     width: 700px;
 }
 
+.intro-title p {
+    animation-duration: 250ms;
+    animation: 1s ease-out;
+}
+
+@keyframes slineIn {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
 /* 인트로 반응형 */
 @media screen and (max-width: 1614px) {
     .intro-box {
